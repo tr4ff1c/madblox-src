@@ -1,0 +1,47 @@
+<?php
+require("../../core/config.php");
+
+if (!empty($_POST['bodyP'])) {
+    $bodyPart = filter_var($_POST['bodyP'], FILTER_SANITIZE_STRING);
+
+    // Validate the body part
+    $allowedBodyParts = array("head", "torso", "leftarm", "rightarm", "leftleg", "rightleg");
+    if (!in_array($bodyPart, $allowedBodyParts)) {
+        die("ERR: Invalid body part");
+    }
+
+    $color = filter_var(htmlspecialchars($_POST['color']), FILTER_SANITIZE_STRING);
+
+$part = $bodyPart;
+
+    if ($part == "head") {
+    $dbval = "headcolor";
+} else if ($part == "torso") {
+    $dbval = "torsocolor";
+} else if ($part == "leftarm") {
+    $dbval = "leftarmcolor";
+} else if ($part == "rightarm") {
+    $dbval = "rightArmcolor";
+} else if ($part == "leftleg") {
+    $dbval = "leftLegcolor";
+} else if ($part == "rightleg") {
+    $dbval = "rightlegcolor";
+} else {
+    die("ERR:invpart_" . $part);
+}
+
+    $updateQuery = "UPDATE users SET $dbval = :color WHERE id = :userId";
+    $updateStmt = $db->prepare($updateQuery);
+    $updateStmt->bindParam(':color', $color, PDO::PARAM_STR);
+    $updateStmt->bindParam(':userId', $_USERID, PDO::PARAM_INT);
+
+    if ($updateStmt->execute()) {
+        header("Location: /api/render.php?id=" . $_USERID);
+        exit();
+    } else {
+        die("ERR:" . $updateStmt->errorInfo()[2]); // Display specific PDO error message
+    }
+} else {
+    die("ERR: Missing body part");
+}
+?>

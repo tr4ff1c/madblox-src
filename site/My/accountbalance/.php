@@ -1,0 +1,1 @@
+<?php header('location: /my/accountbalance/trade.aspx');
