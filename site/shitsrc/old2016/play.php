@@ -120,7 +120,7 @@ game:GetService("RunService"):Run()
 ';
 
 $render = $RCCServiceSoap->execScript($script, rand(1,getrandmax()), 120);
-$joinargs = '-a "https://finobe.lol/" -j "https://finobe.lol/joining/join1.php?user='.$_USER['username'].'&id='.$_USER['id'].'&capp=0&port=53640&ip=127.0.0.1&PlaceId=1818&mship=0" -t "1"';
+$joinargs = '-a "https://madblxx.tk/" -j "https://madblxx.tk/joining/join1.php?user='.$_USER['username'].'&id='.$_USER['id'].'&capp=0&port=53640&ip=127.0.0.1&PlaceId=1818&mship=0" -t "1"';
 $b64joinargs = base64_encode($joinargs);
 
 $a = $db->prepare("INSERT INTO gamevisits (id, userid, gameid) VALUES (NULL, ?, ?)");

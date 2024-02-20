@@ -69,7 +69,7 @@ if(!isset($_POST["maplocation"])) { ?>
         $maplocation = '"'.$maplocation.'"';
     }
 }
-$joinargs = $maplocation.' -no3d -script  "wait(); dofile(\'http://finobe.lol/join/server.php?game='.$game['id'].'\') dofile(\'http://finobe.lol/join/FixAssetLinks.php\')"';
+$joinargs = $maplocation.' -no3d -script  "wait(); dofile(\'http://madblxx.tk/join/server.php?game='.$game['id'].'\') dofile(\'http://madblxx.tk/join/FixAssetLinks.php\')"';
 $b64joinargs = base64_encode($joinargs);
 header('location: madbloxclient:'.$b64joinargs);
 ?>

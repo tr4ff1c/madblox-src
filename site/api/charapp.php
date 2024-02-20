@@ -16,13 +16,13 @@ foreach ($result as $row) {
     $item = $itemq->fetch(PDO::FETCH_ASSOC);
 
     if ($item['type'] == 'hat') {
-        $echothing .= "http://finobe.lol/asste/?id=" . $item['assetid'] . ";";
+        $echothing .= "http://madblxx.tk/asste/?id=" . $item['assetid'] . ";";
     } elseif ($item['type'] == 'shirt') {
-        $echothing .= "http://finobe.lol/asste/ShirtFetch?id=" . $item['id'] . ";";
+        $echothing .= "http://madblxx.tk/asste/ShirtFetch?id=" . $item['id'] . ";";
     } elseif ($item['type'] == 'tshirt') {
-        $echothing .= "http://finobe.lol/asste/TshirtFetch?id=" . $item['id'] . ";";
+        $echothing .= "http://madblxx.tk/asste/TshirtFetch?id=" . $item['id'] . ";";
     } elseif ($item['type'] == 'pants') {
-        $echothing .= "http://finobe.lol/asste/PantsFetch?id=" . $item['id'] . ";";
+        $echothing .= "http://madblxx.tk/asste/PantsFetch?id=" . $item['id'] . ";";
     }
 }
 

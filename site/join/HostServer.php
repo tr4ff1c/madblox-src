@@ -29,8 +29,8 @@ end
 game.Players.PlayerAdded:connect(onJoined) 
 game.Players.PlayerAdded:connect(function(PlayerAdded)
 
-game:httpGet("http://finobe.lol/api/addplayer?gameid=<?php echo $id;?>")
-banned = game:httpGet("http://finobe.lol/api/isBanned?id="..PlayerAdded.Name)
+game:httpGet("http://madblxx.tk/api/addplayer?gameid=<?php echo $id;?>")
+banned = game:httpGet("http://madblxx.tk/api/isBanned?id="..PlayerAdded.Name)
 if banned == "true" then
 print(PlayerAdded.Name.." is banned")
 end
@@ -38,7 +38,7 @@ end
 end)
 game.Players.PlayerRemoving:connect(function(PlayerRemoved)
 
-game:httpGet("http://finobe.lol/api/removeplayer?gameid=<?php echo $id;?>")
+game:httpGet("http://madblxx.tk/api/removeplayer?gameid=<?php echo $id;?>")
 
 end)
 

@@ -3,7 +3,7 @@
 	<External>nil</External>
 	<Item class="SpecialMesh" referent="RBX0">
 		<Properties>
-			<Content name="MeshId">http://finobe.lol/api/head.mesh<null></null></Content>
+			<Content name="MeshId">http://madblxx.tk/api/head.mesh<null></null></Content>
 			<token name="MeshType">FileMesh</token>
 			<string name="Name">Mesh</string>
 			<Vector3 name="Scale">

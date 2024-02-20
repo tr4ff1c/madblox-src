@@ -12,4 +12,4 @@ $itemq->execute([$datafile]);
 $item = $itemq->fetch(PDO::FETCH_ASSOC);
 
 ?>
-game:Load("http://finobe.lol/ast/places/get?id=<?php if(isset($_GET['id'])) {echo (int)$_GET['id'];} else {echo 0;} ?>&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
+game:Load("http://madblxx.tk/ast/places/get?id=<?php if(isset($_GET['id'])) {echo (int)$_GET['id'];} else {echo 0;} ?>&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")

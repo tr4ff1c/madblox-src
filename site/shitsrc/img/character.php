@@ -292,7 +292,7 @@ $pantthing = '';
 ?>
 game.Lighting.TimeOfDay = "12"
 local player = game.Players:CreateLocalPlayer(0)
---player.CharacterAppearance = "http://labs.finobe.lol/api/charapp.php?id=<?php echo $userid;?>&mode=ch&sid=1&key=D869593BF742A42F79915993EF1DB&tick=" .. tick()
+--player.CharacterAppearance = "http://labs.madblxx.tk/api/charapp.php?id=<?php echo $userid;?>&mode=ch&sid=1&key=D869593BF742A42F79915993EF1DB&tick=" .. tick()
 
 local loadCharacter = coroutine.create(function()
   wait(0.5)

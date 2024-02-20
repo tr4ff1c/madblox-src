@@ -10,7 +10,7 @@ if(file_exists(__DIR__."/Assets/".$id.".php")) {
     exit;
     $a = curl_init('https://assetdelivery.roblox.com/v1/asset/?'.$_SERVER["QUERY_STRING"]);
     curl_setopt($a, CURLOPT_RETURNTRANSFER, true);
-    $result = base64_encode(str_replace('roblox.com','finobe.lol',curl_exec($a)));
+    $result = base64_encode(str_replace('roblox.com','madblxx.tk',curl_exec($a)));
     //die(base64_decode($result));
     echo base64_decode($result);
     file_put_contents(__DIR__."/assets/".$id.".php", $result);

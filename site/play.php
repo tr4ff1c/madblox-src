@@ -85,7 +85,7 @@ if($game["gameserver"] !== 0 && $game['players'] < 1){
 
 sleep(3);
 
-$joinargs = '-script "wait(); dofile(\'http://finobe.lol/join/character.php?placeid='.$game['id'].'&accountcode='.$newaccountcode.'\') dofile(\'http://finobe.lol/join/play.php?placeid='.$game['id'].'&accountcode='.$newaccountcode.'\')"';
+$joinargs = '-script "wait(); dofile(\'http://madblxx.tk/join/character.php?placeid='.$game['id'].'&accountcode='.$newaccountcode.'\') dofile(\'http://madblxx.tk/join/play.php?placeid='.$game['id'].'&accountcode='.$newaccountcode.'\')"';
 $b64joinargs = base64_encode($joinargs);
 header('location: madbloxclient:'.$b64joinargs);
 }

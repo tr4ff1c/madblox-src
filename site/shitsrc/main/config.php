@@ -14,7 +14,7 @@ if(
 // error_reporting(0);
 
 $sitename = "SIGMABLOXXER";
-$sitedomain = "finobe.lol";
+$sitedomain = "madblxx.tk";
 $title = $sitename.": A FREE Virtual World-Building Game with Avatar Chat, 3D Environments, and Physics";
 $rccport = 35518;
 

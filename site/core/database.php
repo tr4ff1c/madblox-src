@@ -35,7 +35,7 @@ $conn = $db; */
 
 $sitename = "MADBLOX";
 // $sitename = '<img style="width:100px;height:35px;" src="https://media.discordapp.net/attachments/1203465620255936552/1206294994084700210/IMG_2365.png?ex=65db7cc2&is=65c907c2&hm=5f1301ec56854881288dde493c98cd27cb425952261d86437762734fd526c517&=&format=png&quality=lossless">';
-$sitedomain = "finobe.lol";
+$sitedomain = "madblxx.tk";
 $title = $sitename.": A FREE Virtual World-Building Game with Avatar Chat, 3D Environments, and Physics";
 $siteurl = "http://".$sitedomain;
 $sitelogo = "/images/madbloxlogo.png";

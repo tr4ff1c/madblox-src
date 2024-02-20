@@ -7,7 +7,7 @@ HostService = game:GetService("RunService")
 
 Server:Start(Port,20)
 
-game:Load("http://finobe.lol/ast/places/get?id=<?php if(isset($_GET['id'])) {echo (int)$_GET['id'];} else {echo 0;} ?>&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
+game:Load("http://madblxx.tk/ast/places/get?id=<?php if(isset($_GET['id'])) {echo (int)$_GET['id'];} else {echo 0;} ?>&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
 
 game:GetService("RunService"):Run()
 
@@ -16,7 +16,7 @@ print("Rowritten server started!")
 function onJoined(NewPlayer)
     print("Player joined: "..NewPlayer.Name.."")
     print("Checking for account code...")
-    check = game:httpGet("http://local.finobe.lol/api/checkAccountCode?code="..NewPlayer.Name.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
+    check = game:httpGet("http://local.madblxx.tk/api/checkAccountCode?code="..NewPlayer.Name.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
     if check == "#cant-join" then
         NewPlayer:remove()
     else
@@ -38,12 +38,12 @@ game.Players.PlayerAdded:connect(onJoined)
 
 game.Players.PlayerAdded:connect(function(PlayerAdded)
     count = #game.Players:GetPlayers()
-    game:httpGet("http://finobe.lol/api/setplayers?gameid=<?php echo $_GET['id'];?>&count="..count.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
-    --game:httpGet("http://finobe.lol/api/addplayer?gameid=<?php echo $_GET['id'];?>&id="..PlayerAdded.userId.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
+    game:httpGet("http://madblxx.tk/api/setplayers?gameid=<?php echo $_GET['id'];?>&count="..count.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
+    --game:httpGet("http://madblxx.tk/api/addplayer?gameid=<?php echo $_GET['id'];?>&id="..PlayerAdded.userId.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
 end)
 
 game.Players.PlayerRemoving:connect(function(PlayerRemoved)
     count = #game.Players:GetPlayers()
-    game:httpGet("http://finobe.lol/api/setplayers?gameid=<?php echo $_GET['id'];?>&count="..count.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
-    --game:httpGet("http://finobe.lol/api/removeplayer?gameid=<?php echo $_GET['id'];?>&id="..PlayerRemoved.userId.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
+    game:httpGet("http://madblxx.tk/api/setplayers?gameid=<?php echo $_GET['id'];?>&count="..count.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
+    --game:httpGet("http://madblxx.tk/api/removeplayer?gameid=<?php echo $_GET['id'];?>&id="..PlayerRemoved.userId.."&apikey=<?php echo $_GET['apikey'] ?? ""; ?>")
 end)
