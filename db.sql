@@ -2602,7 +2602,7 @@ CREATE TABLE `gameservers` (
   `ip` varchar(10000) NOT NULL,
   `name` varchar(255) NOT NULL,
   `ports` varchar(1000) CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '53640-53641',
-  `usedPorts` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL DEFAULT '[]' CHECK (json_valid(`usedPorts`)),
+  `usedPorts` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL CHECK (json_valid(`usedPorts`)),
   `apiKey` longtext CHARACTER SET utf8mb4 COLLATE utf8mb4_bin NOT NULL,
   PRIMARY KEY (`id`)
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
